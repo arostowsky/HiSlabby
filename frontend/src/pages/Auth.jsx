@@ -41,15 +41,15 @@ export default function Auth() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#050912]/60 via-transparent to-[#050912]" />
         <div className="relative z-10 h-full flex flex-col justify-between p-12">
           <div>
-            <div className="font-serif text-3xl">Slabby</div>
-            <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400 mt-1">Exchange · Vault · Credit</div>
+            <div className="display-tight italic text-4xl text-white">SLABBY<span className="text-[#d4ff00]">.</span></div>
+            <div className="text-[10px] tracking-[0.3em] uppercase text-[#d4ff00] mt-2">Exchange / Vault / Credit</div>
           </div>
           <div className="max-w-md">
-            <div className="font-serif text-3xl leading-tight">
-              "Treat cards <br/>like an asset class."
+            <div className="display-tight uppercase italic text-4xl lg:text-5xl leading-[0.9]">
+              Trade slabs <span className="text-[#d4ff00]">like assets.</span>
             </div>
-            <div className="mt-4 text-sm text-slate-400">
-              The first institutional exchange for graded sports cards. Instant vault-to-vault settlement. AI-verified fairness. Collateralized credit.
+            <div className="mt-5 text-sm text-slate-400">
+              The institutional exchange for graded sports cards. Vault-to-vault settlement. AI-verified fairness. Collateralized credit.
             </div>
           </div>
         </div>
@@ -57,8 +57,8 @@ export default function Auth() {
 
       <div className="flex items-center justify-center p-8 lg:p-16">
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
-          <div className="text-[10px] tracking-[0.3em] uppercase text-slate-500">{mode === "login" ? "Access your vault" : "Open an account"}</div>
-          <h1 className="mt-2 font-serif text-4xl">{mode === "login" ? "Sign in" : "Create account"}</h1>
+          <div className="text-[10px] tracking-[0.3em] uppercase text-[#d4ff00]">{mode === "login" ? "Access your vault" : "Open an account"}</div>
+          <h1 className="mt-2 display-tight uppercase italic text-5xl lg:text-6xl">{mode === "login" ? "Sign In." : "Create."}</h1>
 
           <form onSubmit={submit} className="mt-8 space-y-5" data-testid="auth-form">
             {mode === "register" && (

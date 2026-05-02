@@ -39,7 +39,7 @@ export default function Match() {
         <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400 flex items-center gap-2">
           <Sparkles className="h-3 w-3" /> AI Matching · Claude Sonnet 4.5
         </div>
-        <h1 className="mt-2 font-serif text-4xl lg:text-5xl">Find a Fair Trade</h1>
+        <h1 className="mt-2 display-tight uppercase italic text-5xl lg:text-7xl">Find a Trade.</h1>
         <p className="mt-3 text-sm text-slate-400 max-w-2xl">Our valuation engine scans live listings and ranks the best cross-demand matches for any card in your vault.</p>
 
         <div className="mt-8 grid lg:grid-cols-12 gap-6">
@@ -104,7 +104,7 @@ export default function Match() {
                     </div>
                     <div className="text-right">
                       <div className="num text-white">{fmtUSD(m.card.est_value)}</div>
-                      <Link to={`/exchange/${m.card.id}`} data-testid={`match-go-${m.card.id}`} className="mt-2 inline-block text-xs bg-emerald-500 text-slate-950 hover:bg-emerald-400 px-3 py-1.5 rounded-sm">Propose trade →</Link>
+                      <Link to={`/exchange/${m.card.id}`} data-testid={`match-go-${m.card.id}`} className="mt-2 inline-block text-xs bg-[#d4ff00] text-slate-950 hover:bg-[#bfe800] px-3 py-1.5 rounded-sm font-bold uppercase tracking-wider">Propose →</Link>
                     </div>
                   </motion.div>
                 ))}

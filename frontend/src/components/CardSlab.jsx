@@ -43,10 +43,10 @@ export default function CardSlab({ card, linkTo, rightSlot, footerSlot, compact 
         {/* Big grade numeral */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <div className="font-serif num leading-none" style={{ fontSize: "clamp(3.5rem, 9vw, 6.5rem)", color: `hsl(${hsl})` }}>
+            <div className="anton num leading-none" style={{ fontSize: "clamp(4rem, 11vw, 8rem)", color: `hsl(${hsl})` }}>
               {card.grade}
             </div>
-            <div className="mt-1 text-[10px] tracking-[0.35em] uppercase text-slate-400">Graded</div>
+            <div className="mt-2 text-[10px] tracking-[0.4em] uppercase text-slate-400 font-bold">{card.grader}</div>
           </div>
         </div>
 
@@ -66,7 +66,7 @@ export default function CardSlab({ card, linkTo, rightSlot, footerSlot, compact 
         <div className="text-[10px] tracking-[0.2em] uppercase text-slate-500 flex items-center justify-between">
           <span>{card.set_name?.length > 22 ? card.set_name.slice(0, 22) + "…" : card.set_name}</span>
         </div>
-        <div className="mt-1 font-serif text-lg leading-tight text-white truncate">{card.player}</div>
+        <div className="mt-1 display-tight uppercase tracking-[-0.02em] text-base text-white truncate">{card.player}</div>
         <div className="mt-3 flex items-end justify-between">
           <div className="num text-lg text-white">{fmtUSD(card.est_value)}</div>
           {typeof card.market_change_24h === "number" && card.market_change_24h !== 0 && (

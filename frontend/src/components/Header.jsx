@@ -21,12 +21,12 @@ export default function Header() {
   return (
     <header className="glass sticky top-0 z-40 border-b border-white/5" data-testid="app-header">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-        <Link to={user ? "/vault" : "/"} className="flex items-center gap-2 group" data-testid="brand-home-link">
-          <div className="h-7 w-7 rounded-sm bg-emerald-500/10 border border-emerald-500/40 grid place-items-center">
-            <div className="h-2 w-2 bg-emerald-400 rounded-[1px]" />
+        <Link to={user ? "/vault" : "/"} className="flex items-center gap-2.5 group" data-testid="brand-home-link">
+          <div className="h-7 w-7 rounded-sm bg-[#d4ff00] grid place-items-center">
+            <div className="h-3 w-1 bg-slate-950 skew-x-[-12deg]" />
           </div>
-          <span className="font-serif text-xl tracking-tight">Slabby</span>
-          <span className="hidden sm:inline text-[10px] tracking-[0.25em] uppercase text-slate-500 ml-1">Exchange · Vault</span>
+          <span className="display-tight text-[26px] italic tracking-[-0.04em] text-white">SLABBY<span className="text-[#d4ff00]">.</span></span>
+          <span className="hidden sm:inline text-[10px] tracking-[0.3em] uppercase text-slate-500 ml-2 border-l border-slate-800 pl-3">EXCHANGE / VAULT</span>
         </Link>
 
         {user && (

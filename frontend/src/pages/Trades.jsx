@@ -61,8 +61,8 @@ function TradeCard({ t, isIncoming, onAccept, onReject, busyId }) {
       </div>
       {isIncoming && t.status === "pending" && (
         <div className="mt-5 flex gap-3 border-t border-slate-900 pt-4">
-          <button data-testid={`accept-trade-${t.id}`} onClick={() => onAccept(t)} disabled={busy} className="flex-1 text-sm bg-emerald-500 text-slate-950 hover:bg-emerald-400 py-2 rounded-sm disabled:opacity-60 flex items-center justify-center gap-1.5">
-            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <><CheckCircle2 className="h-4 w-4" /> Accept & settle</>}
+          <button data-testid={`accept-trade-${t.id}`} onClick={() => onAccept(t)} disabled={busy} className="flex-1 text-sm bg-[#d4ff00] text-slate-950 hover:bg-[#bfe800] py-2.5 rounded-sm disabled:opacity-60 flex items-center justify-center gap-1.5 font-bold uppercase tracking-wider">
+            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <><CheckCircle2 className="h-4 w-4" /> Accept &amp; settle</>}
           </button>
           <button data-testid={`reject-trade-${t.id}`} onClick={() => onReject(t)} disabled={busy} className="flex-1 text-sm border border-slate-800 hover:border-red-500/60 text-slate-300 py-2 rounded-sm flex items-center justify-center gap-1.5">
             <XCircle className="h-4 w-4" /> Reject
@@ -115,7 +115,7 @@ export default function Trades() {
       <Ticker />
       <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-10">
         <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">Escrow Desk</div>
-        <h1 className="mt-2 font-serif text-4xl lg:text-5xl">Trade Inbox</h1>
+        <h1 className="mt-2 display-tight uppercase italic text-5xl lg:text-7xl">Trade Inbox.</h1>
 
         <Tabs defaultValue="incoming" className="mt-8">
           <TabsList className="bg-slate-950 border border-slate-800 rounded-none p-0 h-auto">

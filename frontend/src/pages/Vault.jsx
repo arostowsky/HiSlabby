@@ -42,7 +42,7 @@ export default function Vault() {
             <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400 flex items-center gap-1.5">
               <ShieldCheck className="h-3 w-3" /> Institutional Custody
             </div>
-            <h1 className="mt-2 font-serif text-4xl lg:text-5xl">Your Vault</h1>
+            <h1 className="mt-2 display-tight uppercase italic text-5xl lg:text-7xl">Your Vault.</h1>
             <div className="mt-3 text-sm text-slate-400">Graded slabs in secure Slabby custody. Ready for vault-to-vault settlement.</div>
           </div>
           <div className="flex items-center gap-10">

@@ -17,7 +17,7 @@ export default function Portfolio() {
       <Ticker />
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-10">
         <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">Prime Brokerage</div>
-        <h1 className="mt-2 font-serif text-4xl lg:text-5xl">Portfolio</h1>
+        <h1 className="mt-2 display-tight uppercase italic text-5xl lg:text-7xl">Portfolio.</h1>
 
         <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-px bg-slate-900">
           <Stat k="MTM Total" v={fmtUSD(data.total_value)} />

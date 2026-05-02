@@ -36,7 +36,7 @@ export default function Exchange() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">Open Order Book</div>
-            <h1 className="mt-2 font-serif text-4xl lg:text-5xl">Exchange</h1>
+            <h1 className="mt-2 display-tight uppercase italic text-5xl lg:text-7xl">Exchange.</h1>
             <p className="mt-3 text-sm text-slate-400 max-w-xl">Every listing is already vaulted. Acceptance triggers instant vault-to-vault settlement.</p>
           </div>
           <div className="flex items-center gap-4">

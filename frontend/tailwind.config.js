@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Playfair Display"', 'ui-serif', 'Georgia', 'serif'],
-        sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        serif: ['"Archivo Black"', 'system-ui', 'sans-serif'],
+        display: ['"Archivo Black"', 'system-ui', 'sans-serif'],
+        anton: ['Anton', 'system-ui', 'sans-serif'],
+        sans: ['"Inter Tight"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', '"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',

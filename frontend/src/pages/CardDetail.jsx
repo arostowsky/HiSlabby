@@ -103,8 +103,8 @@ export default function CardDetail() {
                 <div className="absolute top-3 right-3 p-1 bg-slate-950/80 border border-emerald-500/40"><ShieldCheck className="h-3 w-3 text-emerald-400" /></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="font-serif num text-emerald-400/90 leading-none" style={{ fontSize: "clamp(5rem, 14vw, 9rem)" }}>{card.grade}</div>
-                    <div className="mt-3 text-[10px] tracking-[0.35em] uppercase text-slate-400">Graded · {card.sport}</div>
+                    <div className="anton num text-[#d4ff00] leading-none" style={{ fontSize: "clamp(6rem, 17vw, 11rem)" }}>{card.grade}</div>
+                    <div className="mt-3 text-[11px] tracking-[0.4em] uppercase text-slate-400 font-bold">{card.grader} · {card.sport}</div>
                   </div>
                 </div>
                 <div className="absolute bottom-3 left-3 num text-xs text-slate-400">{card.year}</div>
@@ -140,7 +140,7 @@ export default function CardDetail() {
           {/* Right: details + offer builder */}
           <div className="lg:col-span-7">
             <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">{card.sport} · {card.year}</div>
-            <h1 className="mt-2 font-serif text-5xl leading-tight">{card.player}</h1>
+            <h1 className="mt-2 display-tight uppercase italic" style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}>{card.player}.</h1>
             <div className="mt-2 text-slate-400">{card.set_name}</div>
             <div className="mt-6 grid grid-cols-4 gap-6 pb-6 border-b border-slate-800">
               <Metric k="Mark" v={fmtUSD(card.est_value)} />
@@ -193,7 +193,7 @@ export default function CardDetail() {
                   data-testid="submit-offer-btn"
                   onClick={submitOffer}
                   disabled={submitting || (!selected.length && !cash)}
-                  className="w-full bg-emerald-500 text-slate-950 hover:bg-emerald-400 text-sm font-medium py-3 rounded-sm disabled:opacity-60 flex items-center justify-center gap-2"
+                  className="w-full bg-[#d4ff00] text-slate-950 hover:bg-[#bfe800] text-sm font-bold uppercase tracking-wider py-3.5 rounded-sm disabled:opacity-60 flex items-center justify-center gap-2"
                 >
                   {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : "Submit trade offer →"}
                 </button>
