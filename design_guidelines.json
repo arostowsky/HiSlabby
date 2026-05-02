@@ -1,0 +1,120 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Jewel & Luxury) mixed with 4 (Swiss & High-Contrast)",
+  "typography": {
+    "fonts": [
+      {
+        "name": "Playfair Display",
+        "type": "heading",
+        "css_class": "font-serif",
+        "google_font_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      },
+      {
+        "name": "Outfit",
+        "type": "body",
+        "css_class": "font-sans",
+        "google_font_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      },
+      {
+        "name": "IBM Plex Mono",
+        "type": "mono",
+        "css_class": "font-mono",
+        "google_font_url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      }
+    ],
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-sm sm:text-base leading-relaxed text-slate-300",
+      "data_labels": "text-xs tracking-[0.2em] uppercase text-slate-400",
+      "ticker": "text-sm font-mono tabular-nums tracking-tighter"
+    }
+  },
+  "colors": {
+    "background": "#030712",
+    "surface": "#0F172A",
+    "surface_elevated": "#1E293B",
+    "primary": "#F8F9FA",
+    "accent_emerald": "#10B981",
+    "accent_amber": "#F59E0B",
+    "text_primary": "#F8F9FA",
+    "text_secondary": "#94A3B8",
+    "border": "#1E293B"
+  },
+  "layout": {
+    "spacing_scale": "generous",
+    "container_padding": "p-6 sm:p-8 md:p-12",
+    "grid_strategy": "Control Room (dense data, tight gaps: gap-4 or gap-6, 1px subtle borders)",
+    "surfaces": "Grid Borders (Technical Look) + Glassmorphism for sticky elements (bg-slate-950/70 backdrop-blur-xl border-b border-white/10)"
+  },
+  "components": {
+    "cards": "Flat background, 1px subtle border (border-slate-800), no shadow. Hover: slight lift (-translate-y-1), border color brightens.",
+    "buttons": "Sharp corners or max 4px radius. High contrast. Primary: bg-white text-slate-950 hover:bg-slate-200. Accent: bg-emerald-600 text-white hover:bg-emerald-500.",
+    "tables": "Data-dense, compact cells, IBM Plex Mono for numbers, tabular-nums utility. Right-align numeric columns. Use subtle row hover states (hover:bg-slate-800/50).",
+    "vault_tiles": "Premium asset tiles. Use abstract navy texture as backdrop. Slab image centered. Subtle inner glow to signify institutional custody.",
+    "ticker": "react-fast-marquee for live price feeds of top traded cards."
+  },
+  "motion": {
+    "page_transitions": "Framer Motion fade and slide up.",
+    "hover": "Subtle border color shifts, 0.2s ease.",
+    "ticker": "Continuous smooth scroll for market prices.",
+    "price_update": "Pulse animation (emerald/red flash) on price change or trade match."
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1642692704110-1bcf24bb5689?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwzfHxncmFkZWQlMjBzcG9ydHMlMjBjYXJkJTIwc2xhYiUyMGJhc2ViYWxsJTIwYmFza2V0YmFsbHxlbnwwfHx8fDE3Nzc2OTAyNjZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "card_slab_placeholder_1",
+        "description": "Graded sports card in hand"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1642692704112-80f6ba7f6aa3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxncmFkZWQlMjBzcG9ydHMlMjBjYXJkJTIwc2xhYiUyMGJhc2ViYWxsJTIwYmFza2V0YmFsbHxlbnwwfHx8fDE3Nzc2OTAyNjZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "card_slab_placeholder_2",
+        "description": "Basketball card"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1609358905581-e5381612486e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxiYW5rJTIwdmF1bHQlMjBzYWZlJTIwZG9vciUyMHByZW1pdW18ZW58MHx8fHwxNzc3NjkwMjY2fDA&ixlib=rb-4.1.0&q=85",
+        "category": "vault_background",
+        "description": "Premium bank vault door for secure custody vibes"
+      },
+      {
+        "url": "https://images.pexels.com/photos/12306417/pexels-photo-12306417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "texture_navy",
+        "description": "Elegant smooth dark blue abstract texture for asset tiles and headers"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762290965691-e74072600c03?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3Nzc2OTAyNzV8MA&ixlib=rb-4.1.0&q=85",
+        "category": "avatar_trader_1",
+        "description": "Professional male trader avatar"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762291629616-3e2c044c79a0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBmZW1hbGUlMjBwb3J0cmFpdCUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3NzY5MDI3NXww&ixlib=rb-4.1.0&q=85",
+        "category": "avatar_trader_2",
+        "description": "Professional female trader avatar"
+      }
+    ]
+  },
+  "libraries": [
+    "framer-motion",
+    "lucide-react",
+    "recharts",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "accessibility": {
+    "contrast_ratio": "Ensure minimum 4.5:1 for standard text and 3:1 for large text over dark surfaces.",
+    "testing_attributes": "All interactive elements MUST include data-testid (e.g., data-testid='trade-offer-button').",
+    "focus_states": "focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+  },
+  "instructions_to_main_agent": [
+    "This is a Dark Theme application. Base background is #030712 (deep navy/slate). Text should be #F8F9FA or slate-300.",
+    "Import fonts: Playfair Display, Outfit, IBM Plex Mono. Map them in tailwind.config.js to sans, serif, and mono families.",
+    "For tabular data (order book, portfolio P&L), use IBM Plex Mono with tabular-nums.",
+    "Structure UI similar to a Bloomberg Terminal meeting Robinhood: Dense, technical, dark-mode, minimal padding between data rows.",
+    "For cards and containers, do NOT use default soft shadows or heavy radii. Use 1px borders (border-slate-800), flat colors, sharp aesthetics.",
+    "The Fair Trade Score should look analytical and authoritative. Use Claude 3.5 Sonnet to generate real-time score evaluations.",
+    "Do NOT use placeholder images; use the provided Unsplash/Pexels URLs for slabs and avatars.",
+    "Build the Exchange/Order Book with Shadcn tables or dense grid layouts."
+  ]
+}
