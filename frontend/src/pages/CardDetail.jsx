@@ -95,10 +95,20 @@ export default function CardDetail() {
           <div className="lg:col-span-5">
             <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="border border-slate-800 bg-[#0b1220] slab-gradient overflow-hidden">
               <div className="aspect-[3/4] relative">
-                {card.image_url && <img src={card.image_url} alt={card.player} className="absolute inset-0 w-full h-full object-cover" />}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050912] via-transparent to-transparent" />
-                <div className="absolute top-3 left-3 text-[10px] tracking-[0.2em] uppercase bg-slate-950/80 border border-slate-800 px-2 py-0.5">{card.grader} {card.grade}</div>
+                <div className="absolute inset-0 opacity-[0.08]" style={{
+                  backgroundImage: 'linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px)',
+                  backgroundSize: '40px 40px'
+                }} />
+                <div className="absolute top-3 left-3 text-[10px] tracking-[0.2em] uppercase bg-slate-950/80 border border-slate-800 px-2 py-0.5">{card.grader}</div>
                 <div className="absolute top-3 right-3 p-1 bg-slate-950/80 border border-emerald-500/40"><ShieldCheck className="h-3 w-3 text-emerald-400" /></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="font-serif num text-emerald-400/90 leading-none" style={{ fontSize: "clamp(5rem, 14vw, 9rem)" }}>{card.grade}</div>
+                    <div className="mt-3 text-[10px] tracking-[0.35em] uppercase text-slate-400">Graded · {card.sport}</div>
+                  </div>
+                </div>
+                <div className="absolute bottom-3 left-3 num text-xs text-slate-400">{card.year}</div>
+                <div className="absolute bottom-3 right-3 num text-[10px] text-slate-500 tracking-[0.2em]">#{(card.id || "").slice(0,6).toUpperCase()}</div>
               </div>
             </motion.div>
             <div className="mt-5 border border-slate-800 p-5">

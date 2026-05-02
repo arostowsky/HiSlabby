@@ -56,7 +56,7 @@ export default function Match() {
                     onClick={() => setSelected(c.id)}
                     className={`w-full flex items-center gap-3 p-2 border text-left transition-colors ${selected === c.id ? "border-emerald-500/60 bg-emerald-500/5" : "border-slate-800 hover:border-slate-700"}`}
                   >
-                    {c.image_url && <img src={c.image_url} className="h-12 w-9 object-cover border border-slate-800" alt="" />}
+                    <div className="h-12 w-9 border border-slate-800 bg-slate-950 grid place-items-center font-serif num text-emerald-400/90">{c.grade}</div>
                     <div className="min-w-0 flex-1">
                       <div className="font-serif text-sm truncate">{c.player}</div>
                       <div className="text-[11px] text-slate-500 num">{c.grader} {c.grade} · {fmtUSD(c.est_value)}</div>
@@ -96,7 +96,7 @@ export default function Match() {
                     <div className={`num text-4xl font-serif ${m.match_score >= 80 ? "text-emerald-400" : m.match_score >= 60 ? "text-amber-400" : "text-slate-400"}`}>
                       {m.match_score}
                     </div>
-                    {m.card.image_url && <img src={m.card.image_url} className="h-20 w-14 object-cover border border-slate-800" alt="" />}
+                    <div className="h-20 w-14 border border-slate-800 bg-slate-950 grid place-items-center font-serif num text-emerald-400/90 text-2xl">{m.card.grade}</div>
                     <div className="flex-1 min-w-0">
                       <div className="text-[10px] tracking-[0.25em] uppercase text-slate-500">{m.card.sport} · {m.card.grader} {m.card.grade}</div>
                       <div className="font-serif text-lg truncate">{m.card.player}</div>

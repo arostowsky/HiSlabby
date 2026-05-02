@@ -34,8 +34,10 @@ export default function Auth() {
   return (
     <div className="min-h-[80vh] grid lg:grid-cols-2 relative overflow-hidden">
       <div className="relative hidden lg:block border-r border-slate-900 slab-gradient">
-        <img src="https://images.pexels.com/photos/12306417/pexels-photo-12306417.jpeg?auto=compress&cs=tinysrgb&w=1200"
-             className="absolute inset-0 w-full h-full object-cover opacity-40" alt="" />
+        <div className="absolute inset-0 opacity-[0.06]" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px)',
+          backgroundSize: '64px 64px'
+        }} />
         <div className="absolute inset-0 bg-gradient-to-br from-[#050912]/60 via-transparent to-[#050912]" />
         <div className="relative z-10 h-full flex flex-col justify-between p-12">
           <div>

@@ -61,25 +61,45 @@ export default function Landing() {
             </motion.div>
           </div>
           <div className="lg:col-span-5 mt-16 lg:mt-0">
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}
+            <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}
               className="relative border border-slate-800 bg-[#0b1220]/80 hairline overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1609358905581-e5381612486e?crop=entropy&cs=srgb&fm=jpg&w=900"
-                   alt="Vault" className="w-full aspect-[4/5] object-cover opacity-60" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050912] via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="text-[10px] tracking-[0.25em] uppercase text-emerald-400">Vault · MTM</div>
-                <div className="mt-2 flex items-end justify-between">
-                  <div>
-                    <div className="num text-3xl text-white">$284,712</div>
-                    <div className="text-xs text-slate-400 mt-1">42 slabs · 3 sports · PSA/BGS</div>
+              <div className="relative aspect-[4/5] slab-gradient">
+                <div className="absolute inset-0 opacity-[0.08]" style={{
+                  backgroundImage: 'linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px)',
+                  backgroundSize: '48px 48px'
+                }} />
+                <div className="absolute inset-0 p-8 flex flex-col">
+                  <div className="flex items-center justify-between">
+                    <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">Vault · Ledger</div>
+                    <div className="text-[10px] tracking-[0.2em] uppercase text-slate-500 num">0x9F4C…A271</div>
                   </div>
-                  <div className="num text-emerald-400 text-sm">+4.82% 30D</div>
-                </div>
-                <div className="mt-4 h-10 relative">
-                  <svg viewBox="0 0 200 40" className="w-full h-full">
-                    <polyline fill="none" stroke="#10b981" strokeWidth="1.5"
-                      points="0,30 20,27 40,25 60,28 80,20 100,18 120,22 140,15 160,17 180,10 200,8" />
-                  </svg>
+                  <div className="mt-10 font-serif num text-white leading-none" style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}>$284,712</div>
+                  <div className="mt-3 flex items-center gap-4 text-xs text-slate-400">
+                    <span>42 slabs</span>
+                    <span className="h-1 w-1 rounded-full bg-slate-700" />
+                    <span>3 sports</span>
+                    <span className="h-1 w-1 rounded-full bg-slate-700" />
+                    <span>PSA · BGS</span>
+                    <span className="ml-auto num text-emerald-400">+4.82% 30D</span>
+                  </div>
+                  <div className="mt-auto">
+                    <svg viewBox="0 0 200 60" className="w-full h-20">
+                      <defs>
+                        <linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#10b981" stopOpacity="0.35" />
+                          <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M0,48 L20,44 L40,40 L60,45 L80,32 L100,28 L120,34 L140,20 L160,23 L180,12 L200,8 L200,60 L0,60 Z" fill="url(#lg)" />
+                      <polyline fill="none" stroke="#10b981" strokeWidth="1.2"
+                        points="0,48 20,44 40,40 60,45 80,32 100,28 120,34 140,20 160,23 180,12 200,8" />
+                    </svg>
+                    <div className="mt-3 grid grid-cols-3 border-t border-slate-800 text-[10px] tracking-[0.2em] uppercase">
+                      <div className="py-3 border-r border-slate-800"><div className="text-slate-500">Listed</div><div className="mt-1 text-emerald-400 num normal-case">12</div></div>
+                      <div className="py-3 border-r border-slate-800 pl-3"><div className="text-slate-500">P&amp;L 30D</div><div className="mt-1 text-white num normal-case">+$13,148</div></div>
+                      <div className="py-3 pl-3"><div className="text-slate-500">LTV cap</div><div className="mt-1 text-white num normal-case">50%</div></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

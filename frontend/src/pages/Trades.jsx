@@ -34,7 +34,7 @@ function TradeCard({ t, isIncoming, onAccept, onReject, busyId }) {
             {t.offered_cards.length === 0 && t.cash_amount === 0 && <div className="text-xs text-slate-600">—</div>}
             {t.offered_cards.map((c) => (
               <div key={c.id} className="flex items-center gap-2 text-sm">
-                {c.image_url && <img src={c.image_url} className="h-8 w-6 object-cover border border-slate-800" alt="" />}
+                <div className="h-8 w-6 border border-slate-800 bg-slate-950 grid place-items-center text-[10px] num text-slate-400">{c.grade}</div>
                 <div className="min-w-0">
                   <div className="font-serif truncate">{c.player}</div>
                   <div className="text-[11px] text-slate-500 num">{c.grader} {c.grade} · {fmtUSD(c.est_value)}</div>
@@ -50,7 +50,7 @@ function TradeCard({ t, isIncoming, onAccept, onReject, busyId }) {
           <div className="text-[10px] tracking-[0.25em] uppercase text-slate-500 mb-2">{isIncoming ? "For your" : "For their"}</div>
           {t.target_card && (
             <div className="flex items-center gap-2 text-sm">
-              {t.target_card.image_url && <img src={t.target_card.image_url} className="h-8 w-6 object-cover border border-slate-800" alt="" />}
+              <div className="h-8 w-6 border border-slate-800 bg-slate-950 grid place-items-center text-[10px] num text-slate-400">{t.target_card.grade}</div>
               <div className="min-w-0">
                 <div className="font-serif truncate">{t.target_card.player}</div>
                 <div className="text-[11px] text-slate-500 num">{t.target_card.grader} {t.target_card.grade} · {fmtUSD(t.target_card.est_value)}</div>

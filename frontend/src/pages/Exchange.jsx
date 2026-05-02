@@ -78,7 +78,7 @@ export default function Exchange() {
                 className="w-full grid grid-cols-12 text-sm items-center border-b border-slate-900 hover:bg-slate-900/50 text-left transition-colors"
               >
                 <div className="col-span-5 px-4 py-3 flex items-center gap-3">
-                  {c.image_url && <img src={c.image_url} alt="" className="h-10 w-8 object-cover border border-slate-800" />}
+                  <div className="h-10 w-8 border border-slate-800 bg-slate-950 grid place-items-center text-[11px] num text-slate-400">{c.grade}</div>
                   <div className="min-w-0">
                     <div className="font-serif text-base truncate">{c.player}</div>
                     <div className="text-[11px] text-slate-500 truncate">{c.year} {c.set_name}</div>

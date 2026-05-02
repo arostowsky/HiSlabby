@@ -6,17 +6,11 @@ import { Loader2 } from "lucide-react";
 
 const SPORTS = ["Baseball", "Basketball", "Football", "Hockey", "Soccer", "Other"];
 const GRADERS = ["PSA", "BGS", "SGC", "CGC"];
-const SAMPLE_IMAGES = [
-  "https://images.unsplash.com/photo-1642692704110-1bcf24bb5689?crop=entropy&cs=srgb&fm=jpg&w=800",
-  "https://images.unsplash.com/photo-1642692704112-80f6ba7f6aa3?crop=entropy&cs=srgb&fm=jpg&w=800",
-  "https://images.unsplash.com/photo-1609358905581-e5381612486e?crop=entropy&cs=srgb&fm=jpg&w=800",
-];
-
 export default function AddCardDialog({ open, onOpenChange, onAdded }) {
   const [form, setForm] = useState({
     player: "", year: new Date().getFullYear() - 5, set_name: "",
     grader: "PSA", grade: 10, sport: "Basketball", est_value: 500,
-    image_url: SAMPLE_IMAGES[0], listed_for_trade: false, accepting_cash: true, listing_note: ""
+    listed_for_trade: false, accepting_cash: true, listing_note: ""
   });
   const [saving, setSaving] = useState(false);
 
@@ -79,12 +73,6 @@ export default function AddCardDialog({ open, onOpenChange, onAdded }) {
           <div>
             <label className={labelCls}>Est. Value (USD)</label>
             <input data-testid="card-value-input" type="number" min="250" value={form.est_value} onChange={(e) => set("est_value", e.target.value)} className={fieldCls} />
-          </div>
-          <div>
-            <label className={labelCls}>Slab Image</label>
-            <select data-testid="card-image-input" value={form.image_url} onChange={(e) => set("image_url", e.target.value)} className={fieldCls}>
-              {SAMPLE_IMAGES.map((u, i) => <option key={u} value={u}>Preset {i+1}</option>)}
-            </select>
           </div>
           <div className="col-span-2 flex items-center gap-4 pt-2">
             <label className="flex items-center gap-2 text-sm text-slate-300">
