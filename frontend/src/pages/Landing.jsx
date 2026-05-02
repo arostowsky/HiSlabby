@@ -38,24 +38,24 @@ export default function Landing() {
         <div className="relative max-w-[1400px] mx-auto px-6 lg:px-10 pt-20 pb-24 lg:grid lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-7">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <div className="inline-flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase text-emerald-400 border border-emerald-500/40 bg-emerald-500/5 px-3 py-1">
-                <span className="h-1.5 w-1.5 bg-emerald-400 rounded-full animate-pulse" /> Now open · Invite waitlist
+              <div className="inline-flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase text-[#d4ff00] border border-[#d4ff00]/40 bg-[#d4ff00]/5 px-3 py-1">
+                <span className="h-1.5 w-1.5 bg-[#d4ff00] rounded-full animate-pulse" /> Live · invite waitlist
               </div>
-              <h1 className="mt-6 font-serif text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tight">
-                Financial infrastructure <br/>
-                <span className="italic text-slate-400">for collectibles.</span>
+              <h1 className="mt-6 display-tight uppercase italic text-white" style={{ fontSize: "clamp(3.25rem, 9vw, 8rem)" }}>
+                Trade slabs<br/>
+                <span className="text-[#d4ff00]">like assets.</span>
               </h1>
-              <p className="mt-6 max-w-xl text-base text-slate-300 leading-relaxed">
-                Slabby is the institutional exchange, vault, and credit line for graded sports cards.
-                Trade card-for-card. Borrow against your portfolio. Settle instantly, vault to vault.
-                Schwab meets StockX — for the asset class Wall Street forgot.
+              <p className="mt-7 max-w-xl text-base text-slate-300 leading-relaxed">
+                Slabby is the institutional-grade exchange, vault, and credit line for graded sports cards $250+.
+                Card-for-card. Card + cash. Instant vault-to-vault settlement — zero shipping.
+                <span className="text-white"> StockX speed. Schwab trust.</span>
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
-                <Link to={cta} data-testid="hero-cta-primary" className="bg-white text-slate-950 hover:bg-slate-200 text-sm font-medium px-6 py-3 rounded-sm flex items-center gap-2">
-                  Open a vault account <span className="text-slate-500">→</span>
+                <Link to={cta} data-testid="hero-cta-primary" className="bg-[#d4ff00] text-slate-950 hover:bg-[#bfe800] text-sm font-bold uppercase tracking-wider px-7 py-3.5 rounded-sm flex items-center gap-2">
+                  Open vault <span>→</span>
                 </Link>
-                <Link to="/exchange" data-testid="hero-cta-secondary" className="border border-slate-700 hover:border-slate-500 text-sm px-6 py-3 rounded-sm text-slate-200">
-                  View the Exchange
+                <Link to="/exchange" data-testid="hero-cta-secondary" className="border border-slate-700 hover:border-white text-sm uppercase tracking-wider px-7 py-3.5 rounded-sm text-white font-semibold">
+                  View exchange
                 </Link>
               </div>
             </motion.div>
@@ -70,32 +70,32 @@ export default function Landing() {
                 }} />
                 <div className="absolute inset-0 p-8 flex flex-col">
                   <div className="flex items-center justify-between">
-                    <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">Vault · Ledger</div>
+                    <div className="text-[10px] tracking-[0.3em] uppercase text-[#d4ff00]">Vault · Ledger</div>
                     <div className="text-[10px] tracking-[0.2em] uppercase text-slate-500 num">0x9F4C…A271</div>
                   </div>
-                  <div className="mt-10 font-serif num text-white leading-none" style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}>$284,712</div>
+                  <div className="mt-10 display-tight num text-white" style={{ fontSize: "clamp(3rem, 6.5vw, 5.5rem)" }}>$284,712</div>
                   <div className="mt-3 flex items-center gap-4 text-xs text-slate-400">
-                    <span>42 slabs</span>
+                    <span>42 SLABS</span>
                     <span className="h-1 w-1 rounded-full bg-slate-700" />
-                    <span>3 sports</span>
+                    <span>3 SPORTS</span>
                     <span className="h-1 w-1 rounded-full bg-slate-700" />
                     <span>PSA · BGS</span>
-                    <span className="ml-auto num text-emerald-400">+4.82% 30D</span>
+                    <span className="ml-auto num text-[#d4ff00] font-bold">+4.82% 30D</span>
                   </div>
                   <div className="mt-auto">
                     <svg viewBox="0 0 200 60" className="w-full h-20">
                       <defs>
                         <linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="#10b981" stopOpacity="0.35" />
-                          <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+                          <stop offset="0%" stopColor="#d4ff00" stopOpacity="0.4" />
+                          <stop offset="100%" stopColor="#d4ff00" stopOpacity="0" />
                         </linearGradient>
                       </defs>
                       <path d="M0,48 L20,44 L40,40 L60,45 L80,32 L100,28 L120,34 L140,20 L160,23 L180,12 L200,8 L200,60 L0,60 Z" fill="url(#lg)" />
-                      <polyline fill="none" stroke="#10b981" strokeWidth="1.2"
+                      <polyline fill="none" stroke="#d4ff00" strokeWidth="1.4"
                         points="0,48 20,44 40,40 60,45 80,32 100,28 120,34 140,20 160,23 180,12 200,8" />
                     </svg>
                     <div className="mt-3 grid grid-cols-3 border-t border-slate-800 text-[10px] tracking-[0.2em] uppercase">
-                      <div className="py-3 border-r border-slate-800"><div className="text-slate-500">Listed</div><div className="mt-1 text-emerald-400 num normal-case">12</div></div>
+                      <div className="py-3 border-r border-slate-800"><div className="text-slate-500">Listed</div><div className="mt-1 text-[#d4ff00] num normal-case font-bold">12</div></div>
                       <div className="py-3 border-r border-slate-800 pl-3"><div className="text-slate-500">P&amp;L 30D</div><div className="mt-1 text-white num normal-case">+$13,148</div></div>
                       <div className="py-3 pl-3"><div className="text-slate-500">LTV cap</div><div className="mt-1 text-white num normal-case">50%</div></div>
                     </div>
@@ -111,8 +111,8 @@ export default function Landing() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-2 lg:grid-cols-4 divide-x divide-slate-900">
             {STATS.map((s) => (
               <div key={s.k} className="px-6 py-8">
-                <div className="font-serif text-3xl text-white num">{s.k}</div>
-                <div className="mt-1 text-xs text-slate-500 tracking-[0.15em] uppercase">{s.v}</div>
+                <div className="display-tight text-4xl text-white num">{s.k}</div>
+                <div className="mt-2 text-xs text-slate-500 tracking-[0.15em] uppercase">{s.v}</div>
               </div>
             ))}
           </div>
@@ -122,15 +122,15 @@ export default function Landing() {
       {/* FEATURES */}
       <section className="max-w-[1400px] mx-auto px-6 lg:px-10 py-24">
         <div className="max-w-2xl">
-          <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">Primitives</div>
-          <h2 className="mt-3 font-serif text-4xl lg:text-5xl leading-tight">Six rails. One asset class.</h2>
-          <p className="mt-4 text-slate-400">Every line of Slabby is designed for serious capital — collectors, dealers, and portfolio investors operating in cards at the $250-to-$250K level.</p>
+          <div className="text-[10px] tracking-[0.3em] uppercase text-[#d4ff00]">The stack</div>
+          <h2 className="mt-3 display-tight uppercase italic" style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)" }}>Six rails.<br/>One asset class.</h2>
+          <p className="mt-4 text-slate-400 max-w-xl">Built for serious capital — collectors, dealers, and portfolio investors operating in cards from $250 to $250K.</p>
         </div>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-900">
           {FEATURES.map(({ icon: I, title, body }) => (
             <div key={title} className="bg-[#050912] p-8 hover:bg-[#0b1220] transition-colors">
-              <I className="h-5 w-5 text-emerald-400" />
-              <h3 className="mt-5 font-serif text-xl">{title}</h3>
+              <I className="h-5 w-5 text-[#d4ff00]" />
+              <h3 className="mt-5 display-tight uppercase text-xl text-white">{title}</h3>
               <p className="mt-2 text-sm text-slate-400 leading-relaxed">{body}</p>
             </div>
           ))}
@@ -141,16 +141,16 @@ export default function Landing() {
       <section className="max-w-[1400px] mx-auto px-6 lg:px-10 py-24 border-t border-slate-900">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="font-serif text-4xl lg:text-5xl">The Bloomberg terminal <br/><em className="text-slate-500">for collectibles.</em></h2>
+            <h2 className="display-tight uppercase italic" style={{ fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)" }}>The terminal<br/><span className="text-[#d4ff00]">for slabs.</span></h2>
             <p className="mt-6 text-slate-400 max-w-lg">Portfolio-grade analytics. Institutional custody. AI-verified trades. Collateralized credit. Everything the modern card investor has been forced to stitch together — now one platform.</p>
-            <Link to={cta} data-testid="footer-cta" className="mt-8 inline-flex items-center gap-2 bg-emerald-500 text-slate-950 hover:bg-emerald-400 text-sm font-medium px-6 py-3 rounded-sm">
-              Request vault access →
+            <Link to={cta} data-testid="footer-cta" className="mt-8 inline-flex items-center gap-2 bg-[#d4ff00] text-slate-950 hover:bg-[#bfe800] text-sm font-bold uppercase tracking-wider px-7 py-3.5 rounded-sm">
+              Request access →
             </Link>
           </div>
           <div className="border border-slate-800 p-8 bg-[#0b1220]">
-            <div className="text-[10px] tracking-[0.25em] uppercase text-slate-500">Sample Fair Trade Score</div>
+            <div className="text-[10px] tracking-[0.25em] uppercase text-slate-500">Sample · Fair Trade Score</div>
             <div className="mt-3 flex items-baseline gap-4">
-              <div className="font-serif text-6xl text-emerald-400 num">87</div>
+              <div className="display-tight text-7xl text-[#d4ff00] num">87</div>
               <div className="text-xs text-slate-400 uppercase tracking-[0.2em]">Fair · parity +2.1%</div>
             </div>
             <p className="mt-4 text-sm text-slate-300 leading-relaxed">

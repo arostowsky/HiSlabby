@@ -5,13 +5,13 @@ import { fmtUSD } from "../lib/api";
 
 function scoreColor(s) {
   if (s == null) return "text-slate-400";
-  if (s >= 80) return "text-emerald-400";
+  if (s >= 80) return "text-[#d4ff00]";
   if (s >= 60) return "text-amber-400";
   return "text-red-400";
 }
 function scoreBand(s) {
   if (s == null) return { label: "—", bg: "bg-slate-800" };
-  if (s >= 80) return { label: "Fair", bg: "bg-emerald-500/10 border-emerald-500/40" };
+  if (s >= 80) return { label: "Fair", bg: "bg-[#d4ff00]/10 border-[#d4ff00]/50" };
   if (s >= 60) return { label: "Workable", bg: "bg-amber-500/10 border-amber-500/40" };
   return { label: "Unfair", bg: "bg-red-500/10 border-red-500/40" };
 }
@@ -23,9 +23,9 @@ export default function FairTradeScorePanel({ data, loading, onCompute, compact 
       <div className="flex items-center justify-between">
         <div>
           <div className="text-[10px] tracking-[0.25em] uppercase text-slate-500">Fair Trade Score</div>
-          <div className="font-serif text-xl mt-1 text-white flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-emerald-400" />
-            Claude 4.5 Valuation
+          <div className="font-bold text-xl mt-1 text-white flex items-center gap-2 uppercase tracking-tight">
+            <Sparkles className="h-4 w-4 text-[#d4ff00]" />
+            Fair Trade · AI
           </div>
         </div>
         {onCompute && (
@@ -50,7 +50,7 @@ export default function FairTradeScorePanel({ data, loading, onCompute, compact 
         ) : data ? (
           <motion.div key="d" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
             <div className="mt-6 flex items-center gap-6">
-              <div className={`text-7xl font-serif num ${scoreColor(data.score)}`} data-testid="fair-trade-score-value">
+              <div className={`anton num leading-none ${scoreColor(data.score)}`} style={{ fontSize: "clamp(5rem, 9vw, 8rem)" }} data-testid="fair-trade-score-value">
                 {data.score}
               </div>
               <div className="flex-1">

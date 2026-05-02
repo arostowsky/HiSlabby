@@ -19,7 +19,7 @@ export default function Profile() {
           <div className="h-20 w-20 rounded-full bg-slate-900 border border-slate-800 grid place-items-center font-serif text-2xl">{initials}</div>
           <div>
             <div className="text-[10px] tracking-[0.3em] uppercase text-emerald-400">Trader</div>
-            <h1 className="mt-2 font-serif text-4xl">{u.display_name}</h1>
+            <h1 className="mt-2 display-tight uppercase italic text-5xl lg:text-6xl">{u.display_name}.</h1>
             <div className="mt-1 text-xs text-slate-500">{u.email}</div>
           </div>
         </div>

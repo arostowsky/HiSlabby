@@ -39,19 +39,22 @@
   * { @apply border-border; }
   html, body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
     font-feature-settings: "ss01", "cv11";
   }
   h1, h2, h3, h4 {
-    font-family: 'Playfair Display', ui-serif, Georgia, serif;
-    font-weight: 500;
-    letter-spacing: -0.015em;
+    font-family: 'Archivo Black', system-ui, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 0.95;
   }
-  ::selection { background: rgba(16,185,129,0.35); color: #fff; }
+  ::selection { background: #d4ff00; color: #050912; }
 }
 
 @layer utilities {
   .font-mono, .tabular { font-variant-numeric: tabular-nums; }
+  .display-tight { font-family: 'Archivo Black', system-ui, sans-serif; letter-spacing: -0.04em; line-height: 0.85; }
+  .anton { font-family: 'Anton', system-ui, sans-serif; letter-spacing: 0; }
   .grain::before {
     content: "";
     position: absolute; inset: 0;
@@ -68,12 +71,15 @@
   }
   .card-border { border: 1px solid rgb(30 41 59); }
   .card-border:hover { border-color: rgb(51 65 85); }
-  .num { font-variant-numeric: tabular-nums; font-family: 'IBM Plex Mono', monospace; }
+  .num { font-variant-numeric: tabular-nums; font-family: 'JetBrains Mono', monospace; }
   .text-positive { color: #10b981; }
   .text-negative { color: #ef4444; }
+  .text-hot { color: #d4ff00; }
+  .bg-hot { background-color: #d4ff00; color: #050912; }
+  .border-hot { border-color: #d4ff00; }
   .slab-gradient {
     background:
-      radial-gradient(120% 80% at 50% 0%, rgba(16,185,129,0.12), transparent 60%),
+      radial-gradient(120% 80% at 50% 0%, rgba(212,255,0,0.10), transparent 60%),
       linear-gradient(180deg, #0b1220 0%, #050912 100%);
   }
 }
